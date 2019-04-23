@@ -1,0 +1,74 @@
+PENJELASAN :
+package pbo8;					>>package bernama " pbo8 "
+
+public class pbo8 {				>>class bernama pbo8 bersifat public.
+ 
+public static void main(String[]args){   	
+
+manusia fisik = new manusia();			>>membuat objek bernama " fisik " bertipe manusia.
+TingkahLaku kemampuan = new TingkahLaku();	>>membuat objek bernama " kemampuan " bertipe manusia.
+pekerjaan usaha = new pekerjaan();		>>membuat objek bernama " usaha " bertipe manusia.
+
+fisik.lakiLaki();				>>untuk menampilkan dari void "laki-laki" yang berada di class "manusia"
+fisik.Perempuan();				>>untuk menampilkan dari void "perempuan" yang berada di class "manusia"
+kemampuan.Berjalan();				>>untuk menampilkan dari void "Berjalan" yang berada di class "TingkahLaku"
+kemampuan.Melihat();				>>untuk menampilkan dari void "Melihat" yang berada di class "TingkahLaku"
+kemampuan.mendengar();				>>untuk menampilkan dari void "Mendengar" yang berada di class "TingkahLaku"
+usaha.PNS();					>>untuk menampilkan dari void "Pekerjaan" yang berada di class "Pekerjaan"
+}   
+}
+
+anak : @class manusia
+
+package pbo8;					>>masih di package "pbo8"
+
+public class manusia {				>>class bernama manusia yang bersifat public.
+    protected void lakiLaki(){
+        System.out.println("Tampan");		>>Menampilkan
+        System.out.println("Gagah");		>>Menampilkan
+        System.out.println("Hitam/putih");	>>Menampilkan
+        
+            }
+    protected void Perempuan(){
+        System.out.println("Cantik");		>>Menampilkan
+        System.out.println("Seksi");		>>Menampilkan
+        System.out.println("Hitam/putih");	>>Menampilkan
+    }
+    
+}
+
+@class TingkahLaku
+
+package pbo8;					>>masih di package "pbo8"
+
+public class TingkahLaku extends manusia{
+    public int mata;				>>Deklarasi method dengan mata
+    public int telinga;				>>Deklarasi method dengan telinga
+    protected int kaki;				>>Deklarasi method dengan kaki
+    
+  public TingkahLaku(){
+  mata = 2;					>>Deklarasi variable mata dengan nilai 2
+  kaki = 2;					>>Deklarasi variable kaki dengan nilai 2
+  telinga = 2;					>>Deklarasi variable telinga dengan nilai 2
+    }
+    void Berjalan(){
+        System.out.println("Manusia bergerak menggunakan ="+ kaki + " Kaki");
+    }
+    void Melihat(){
+        System.out.println("Manusia Melihat Dengan ="+  mata +    " Mata");
+    }
+    void mendengar (){
+        System.out.println("Manusia mendengar dengan="+ telinga  + " Telinga");
+    }
+}
+
+@pekerjaan
+
+package pbo8;						>>masih di package "pbo8"
+
+
+public class pekerjaan extends manusia{
+ void PNS(){
+     System.out.println("Senin-Jumat 8 jam kerja");	>>Menampilkan
+ }
+ }
